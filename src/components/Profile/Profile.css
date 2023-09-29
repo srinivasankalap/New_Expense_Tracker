@@ -6,6 +6,16 @@ form{
 input{
     margin: 0.5rem;
 }
-h3{
+.container h1{
+    font-size: 5rem;
+}
+.container h2{
+    text-align: left;
     font-style: italic;
+}
+button{
+    margin: 1rem;
+}
+.container{
+    text-align: center;
 }
