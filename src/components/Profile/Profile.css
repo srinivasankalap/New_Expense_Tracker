@@ -1,0 +1,11 @@
+form{
+    text-align: center;
+    display: block;
+}
+
+input{
+    margin: 0.5rem;
+}
+h3{
+    font-style: italic;
+}

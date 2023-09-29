@@ -26,7 +26,7 @@ const AuthForm = () => {
       );
       return false;
     } 
-    console.log(passwordInputRef,confirmPasswordRef);
+    console.log(emailInputRef.current.value,passwordInputRef.current.value,confirmPasswordRef.current.value);
     if (passwordInputRef.current.value !== confirmPasswordRef.current.value) {
       formIsValid = false;
       setConfirmPasswordError("Passwords do not match");
@@ -47,7 +47,6 @@ const AuthForm = () => {
     const enteredPassword=passwordInputRef.current.value;
 
     setIsLoading(true);
-    if (handleValidation()){
     if(isLogin){
       fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBycSmTAkk_MbjTNxVPNXryNlABlqht8Co',
       {
@@ -77,12 +76,13 @@ const AuthForm = () => {
         }
       }).then(data=>{
         authCtx.login(data.idToken);
-        history('/',{replace:true});
+        history('/home',{replace:true});
       }).catch(err=>{
         alert(err.message);
       })
 
     }else{
+      if (handleValidation()){
       fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBycSmTAkk_MbjTNxVPNXryNlABlqht8Co',
       {
         method:'POST',
@@ -111,13 +111,13 @@ const AuthForm = () => {
         }
       }).then(data=>{
         authCtx.login(data.idToken);
-        history('/',{replace:true});
+        history('/home',{replace:true});
       }).catch(err=>{
         alert(err.message);
       })
+    }else{
+      setIsLoading(false);
     }
-  }else{
-    setIsLoading(false);
   }}
 
   return (
