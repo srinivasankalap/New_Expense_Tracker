@@ -1,21 +1,10 @@
 .App {
-  margin: 5rem;
-}
-.form-group{
-  margin: 1rem;
+  text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-#loginform{
-  padding: 2rem;
-  display: grid;
-  border: 2px solid;
-  border-radius: 0.5rem;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 
 @media (prefers-reduced-motion: no-preference) {
