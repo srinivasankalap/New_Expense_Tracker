@@ -1,5 +1,5 @@
 import { useState, useRef, useContext } from 'react';
-import{useNavigate} from 'react-router-dom';
+import{Link, useNavigate} from 'react-router-dom';
 import classes from './AuthForm.module.css';
 import AuthContext from '../../store/auth-context';
 
@@ -136,6 +136,7 @@ const AuthForm = () => {
             ref={passwordInputRef}
             required
           />
+          <Link to='/forgot' className={classes.forgot}>Forgot Password?</Link>
         </div>
         <div className={classes.actions}>
           {!isLoading&&<button>{isLogin? 'Login': 'Create Account'}</button>}

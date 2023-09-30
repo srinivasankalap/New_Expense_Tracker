@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import { useContext } from 'react';
 import AuthContext from './store/auth-context';
 import ProfilePage from './pages/ProfilePage';
+import Forgot from './components/Auth/Forgot';
 
 function App() {
   const authCtx=useContext(AuthContext);
@@ -13,6 +14,7 @@ function App() {
       <Routes>
       {authCtx.isLoggedIn && <Route path="/home" element={<HomePage />} />}
       {authCtx.isLoggedIn && <Route path="/profile" element={<ProfilePage />} />}
+      <Route path="/forgot" element={<Forgot />} />
         {!authCtx.isLoggedIn && (<Route path="/" element={<AuthPage />} />)}
       <Route path="*" element={<Navigate to='/' />} />
       </Routes>

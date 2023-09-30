@@ -66,7 +66,20 @@
   padding: 0.15rem 1.5rem;
 }
 
+.forgot{
+    margin-top: 1rem;
+  background-color: transparent;
+  color: #9f5ccc;
+  border: none;
+  padding: 0.15rem 1.5rem;
+}
+
 .actions .toggle:hover {
   background-color: transparent;
   color: #ae82cc;
+}
+.forgot:hover{
+    background-color: transparent;
+    color: #ae82cc;
+    cursor: pointer;
 }
