@@ -75,7 +75,7 @@ const AuthForm = () => {
           });
         }
       }).then(data=>{
-        authCtx.login(data.idToken);
+        authCtx.login(data.idToken, enteredEmail);
         history('/home',{replace:true});
       }).catch(err=>{
         alert(err.message);
@@ -110,7 +110,7 @@ const AuthForm = () => {
           });
         }
       }).then(data=>{
-        authCtx.login(data.idToken);
+        authCtx.login(data.idToken, enteredEmail);
         history('/home',{replace:true});
       }).catch(err=>{
         alert(err.message);
