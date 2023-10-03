@@ -1,0 +1,98 @@
+.add-expense {
+    background: #fff;
+    width: 700px  !important;
+    /* height: 400px; */
+    margin: 80px auto 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    padding: 5px 20px !important;
+    border-radius: 4px !important;
+    background-color: beige;
+    /* transition: 0.3s; */
+
+}
+.title{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+   
+}
+.form-controls{
+    outline: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid turquoise !important;
+    margin-top: 5px;
+    padding: 5px 0 ;
+
+}
+.form-controls:focus,
+.form-controls::backdrop {
+
+    /* border: none !important; */
+    box-shadow: none !important;
+
+}
+.form-controls::placeholder{
+    color: lightgray;
+}
+.form-label{
+    font-weight:400;
+}
+
+.btn{
+    display: block !important;
+    background-color: turquoise !important;
+  
+    width: 80%;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
+    color: #fff;
+    margin-top: 5px !important;
+    border: 1px solid turquoise !important;
+    transition: 0.3s;
+    text-transform: uppercase !important;
+    cursor: pointer;
+    margin-bottom: 8px !important;
+
+
+}
+.btn:hover, .btn:active{
+    background-color: transparent !important;
+    border: 1px solid turquoise !important;
+    color: #000 !important;
+    
+}
+.add-expense-dark{
+    background-color: #000;
+    box-shadow: rgba(13, 13, 13, 0.66) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    margin: 80px auto 0 !important;
+    box-sizing: border-box !important;
+    padding: 5px 20px !important;
+    border-radius: 4px !important;
+    width: 500px  !important;
+
+}
+.add-expense-dark .form-controls{
+    color: #fff;
+    background-color: #000;
+    outline: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid turquoise !important;
+    margin-top: 5px;
+    
+}
+.add-expense-dark .form-controls::placeholder,.add-expense-dark .form-controls:focus,
+.form-controls::backdrop{
+    background-color: #000;
+    color: #fff;
+}
+.add-expense-dark .btn{
+    color: #fff !important;
+}

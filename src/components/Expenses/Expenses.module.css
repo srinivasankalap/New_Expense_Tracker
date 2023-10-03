@@ -1,0 +1,187 @@
+.expenses {
+    background: #a79c9c;
+    width: 500px !important;
+   
+    margin: 60px auto !important;
+
+    box-sizing: border-box;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    padding: 5px 20px;
+    border-radius: 4px;
+ 
+
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+.list {
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 5px 10px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    list-style-type: none;
+    padding: 18px !important;
+    margin: 5px 0 !important;
+    transition: 0.3s;
+    color: #000;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.list p {
+    font-size: 1.1rem;
+}
+
+.deleteBtn {
+    font-size: 1.3rem !important;
+    border: none !important;
+    color: red !important;
+    background: transparent !important;
+    cursor: pointer;
+
+
+}
+
+.editBtn {
+    margin-left: 10px !important;
+    border: none !important;
+    font-size: 1.3rem !important;
+    background: transparent !important;
+    color: turquoise !important;
+    cursor: pointer ;
+}
+
+.modal-delete{
+    display: flex !important;
+    background: transparent !important;
+    color: red !important;
+  
+  border: none !important;
+    align-items: center !important;
+}
+
+.modal-cancel{
+    display: flex !important;
+    background: transparent !important;
+border: none !important;
+   align-items: center !important;
+   color: turquoise !important;
+ 
+
+}
+.edit-expense {
+    background: #fff;
+    width: 500px  !important;
+    /* height: 400px; */
+   
+    box-sizing: border-box !important;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    padding: 5px 20px !important;
+    border-radius: 4px !important;
+    /* transition: 0.3s; */
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+   
+}
+.form-controls{
+    outline: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid turquoise !important;
+    margin-top: 5px;
+    padding: 5px 0 ;
+
+}
+
+.form-controls:focus,
+.form-controls::backdrop {
+
+    /* border: none !important; */
+    box-shadow: none !important;
+
+}
+.form-controls::placeholder{
+    color: lightgray;
+}
+.form-label{
+    font-weight:400;
+}
+.total-expenses{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto ;
+    
+   
+   
+}
+.total-expenses h5{
+font-size: 1rem;
+}
+.downloadbtn{
+    background-color: transparent !important;
+    color: turquoise !important;
+    border: 1px solid turquoise !important;
+}
+.expenses-dark{
+    background: #000 !important;
+    width: 500px !important;
+    margin: 60px auto !important;
+    box-sizing: border-box;
+    box-shadow: rgba(13, 13, 13, 0.66) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    padding: 5px 20px;
+    border-radius: 4px;
+   
+    background-color: rgb(8, 7, 7) !important; 
+
+}
+.expenses-dark .list {
+    background-color: #000 !important;
+    box-shadow: rgba(13, 13, 13, 0.66) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+    list-style-type: none;
+    padding: 18px !important;
+    margin: 5px 0 !important;
+    transition: 0.3s;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+   
+border:none;
+}
+.modal-dark,.edit-expense-dark {
+    background-color: #000 !important;
+    color: #fff;
+    z-index: 999;
+    box-shadow: rgba(13, 13, 13, 0.66) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+
+}
+.modal-dark-bg{
+    background-color:rgba(37, 33, 33, 0.603);
+
+}
+.edit-expense-dark .form-controls{
+    outline: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    color: #fff;
+    border-bottom: 2px solid turquoise !important;
+    margin-top: 5px;
+    background-color: #000;
+    padding: 5px 0 ;
+
+}
+.edit-expense-dark .form-controls::placeholder,.edit-expense-dark .form-controls:focus,
+.form-controls::backdrop{
+    background-color: #000;
+    color: #fff;
+}

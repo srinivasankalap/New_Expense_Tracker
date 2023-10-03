@@ -8,7 +8,7 @@ const Profile=()=>{
 
     useEffect(() => {
         const id = localStorage.getItem('token');
-        fetch('https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyBycSmTAkk_MbjTNxVPNXryNlABlqht8Co', {
+        fetch('https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyBs6tNL-lygc73SI0m7rbUpcSBMWLNlaao', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ const Profile=()=>{
         const id=localStorage.getItem('token')
         console.log(id)
         try {
-            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBycSmTAkk_MbjTNxVPNXryNlABlqht8Co', {
+            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBs6tNL-lygc73SI0m7rbUpcSBMWLNlaao', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const Profile=()=>{
     const verifyEmail=async()=>{
         const id=localStorage.getItem('token')
         try{
-            const response= await fetch('https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyBycSmTAkk_MbjTNxVPNXryNlABlqht8Co',{
+            const response= await fetch(,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,26 +1,36 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
-import AuthPage from './pages/AuthPage';
-import HomePage from './pages/HomePage';
-import { useContext } from 'react';
-import AuthContext from './store/auth-context';
-import ProfilePage from './pages/ProfilePage';
-import Forgot from './components/Auth/Forgot';
-import Tracker from './pages/Tracker';
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Authentication from "./components/Authentication/Authentication";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import Verification from "./components/Authentication/Verification";
+import ResetPassword from "./components/Authentication/ResetPassword";
+import { useSelector } from "react-redux";
+import stylesheet from './App.module.css'
 function App() {
-  const authCtx=useContext(AuthContext);
+  const isLoggedIn = useSelector((state) => state.authentication.isLoggedIn);
+  const isDarkTheme = useSelector((state) => state.theme.isDarkTheme);
+
+
+
   return (
-    <Layout>
+    <div   breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
+    minbreakpoint="xxs" className={isDarkTheme && isLoggedIn? stylesheet['dark']:""}>
       <Routes>
-      {authCtx.isLoggedIn && <Route path="/home" element={<HomePage />} />}
-      {authCtx.isLoggedIn && <Route path="/profile" element={<ProfilePage />} />}
-      {authCtx.isLoggedIn && <Route path="/tracker" element={<Tracker />} />}
-      <Route path="/forgot" element={<Forgot />} />
-        {!authCtx.isLoggedIn && (<Route path="/" element={<AuthPage />} />)}
-      <Route path="*" element={<Navigate to='/' />} />
+        <Route path="/" element={<Authentication />} />
+       
+        {isLoggedIn && (
+          <>
+            <Route path="/verification" element={<Verification />} />
+            <Route path="/home" element={<Home />} />
+           
+            <Route path="/profile" element={<Profile />} />
+          </>
+        )}
+        {!isLoggedIn && <Route path="/auth" element={<Authentication />} />}
+        <Route path="forget" element={<ResetPassword />} />
       </Routes>
-    </Layout>
+    </div>
   );
 }
 
