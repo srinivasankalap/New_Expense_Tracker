@@ -4,6 +4,7 @@ import { Button, Container, ListGroup, Modal, Form } from "react-bootstrap";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { GiCancel } from "react-icons/gi";
 import { BsSave } from "react-icons/bs";
+import { FaDownload } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -257,7 +258,15 @@ const Expenses = () => {
         </ListGroup>
         <div className={stylesheet["total-expenses"]}>
           <h5>Total: ₹{totalAmount}</h5>
-          
+          <Button
+            className={stylesheet.downloadbtn}
+            href={`data:text/csv;charset=utf-8,${encodeURIComponent(csvData)}`}
+            download="expenses.csv"
+            style={{ marginLeft: "45%" }}
+          >
+            <FaDownload style={{ marginRight: "5px" }} />
+            Download
+          </Button>
         </div>
         {/* Delete Modal */}
         <Modal
