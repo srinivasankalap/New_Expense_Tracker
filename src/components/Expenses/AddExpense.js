@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import stylesheet from "./AddExpense.module.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -142,7 +142,7 @@ const AddExpense = () => {
     })
     fetchExpenseHandler()
   };
-  const fetchExpenseHandler = () => {
+  const fetchExpenseHandler = useCallback(() => {
     fetch(
       `https://expensetracker-52ef7-default-rtdb.asia-southeast1.firebasedatabase.app/expense${email}.json`
     ).then(res=>{
@@ -182,7 +182,7 @@ const AddExpense = () => {
       dispatch(expenseActions.setTotalAmount(loadedAmount));
     })
    
-  }
+  },[dispatch, email]);
   useEffect(()=>{
     fetchExpenseHandler()
   },[fetchExpenseHandler])

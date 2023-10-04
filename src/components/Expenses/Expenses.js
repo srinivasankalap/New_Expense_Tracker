@@ -193,7 +193,7 @@ const Expenses = () => {
         dispatch(expenseActions.setExpenses(fetchedExpenses));
         dispatch(expenseActions.setTotalAmount(loadedAmount));
       });
-  }, []);
+  }, [dispatch, email]);
 
   useEffect(() => {
     const csv = expenses.reduce((csvString, expense) => {
