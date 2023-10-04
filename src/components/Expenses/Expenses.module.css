@@ -185,3 +185,31 @@ border:none;
     background-color: #000;
     color: #fff;
 }
+
+@media only screen and (max-width: 768px){
+    .expenses {
+        background: #a79c9c;
+        width: 350px !important;
+       
+        margin: 60px auto !important;
+    
+        box-sizing: border-box;
+        box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+        padding: 5px 20px;
+        border-radius: 4px;
+     
+    
+    }
+    .expenses-dark{
+        background: #000 !important;
+        width: 350px !important;
+        margin: 60px auto !important;
+        box-sizing: border-box;
+        box-shadow: rgba(13, 13, 13, 0.66) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+        padding: 5px 20px;
+        border-radius: 4px;
+       
+        background-color: rgb(8, 7, 7) !important; 
+    
+    }
+}

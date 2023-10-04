@@ -48,3 +48,15 @@
   background-color: #000000;
 
 }
+
+@media only screen and (max-width: 768px){
+  span{
+    font-size: x-small;
+    margin-left: 0.5rem;
+  }
+  .completeProfile {
+    color: turquoise !important;
+    text-decoration: underline !important;
+    margin-left: 2px !important;
+  }
+}

@@ -35,9 +35,9 @@ const auth = useSelector((state)=>state.authentication)
         minbreakpoint="xxs">
           {location.pathname !== "/profile" && (
             <span>
-              Your Profile is Incomplete 
+              Complete your profile
                <NavLink to="/profile" className={stylesheet.completeProfile}>
-                Complete Now
+                here
               </NavLink>
             </span>
           )}

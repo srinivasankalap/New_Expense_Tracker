@@ -1,5 +1,5 @@
 .light-them{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 .dark-them{
     background-color: rgb(44, 43, 43) !important; 
@@ -12,4 +12,15 @@
     background-color: transparent !important;
     border: 1px solid turquoise !important;
     color: turquoise !important;
+}
+
+@media only screen and (max-width: 768px){
+    .active-premium{
+        margin-left: 60%;
+        margin-top:2%;
+        background-color: transparent !important;
+        border: 1px solid turquoise !important;
+        color: turquoise !important;
+    }
+    
 }
